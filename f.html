@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 500px;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url(https://www.mckinsey.com/~/media/mckinsey/business%20functions/strategy%20and%20corporate%20finance/our%20insights/the%20coronavirus%20effect%20on%20global%20economic%20sentiment/the-coronavirus-effect-on-global-economic-sentiment-5050-1536x1536.jpg?mw=677&car=8:5)
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            color: red;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: border-box
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Business Survey Form</h2>
+    <div class="container">
+        <div class="box">
+            <form id="survey-form">
+                <h2 style="color: purple;">Business Survey Form</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry:</label>
+                    <select class="form-control" id="industry" name="industry" required>
+                        <option value="" selected disabled hidden>Select your industry</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="education">Education</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your industry.</div>
+                </div>
+                <div style="color: red;">
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">How would you rate our service?</label>
+                    <div>
+                        <input type="radio" id="excellent" name="feedback" value="excellent" required>
+                        <label for="excellent">Excellent</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="good" name="feedback" value="good" required>
+                        <label for="good">Good</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="fair" name="feedback" value="fair" required>
+                        <label for="fair">Fair</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="poor" name="feedback" value="poor" required>
+                        <label for="poor">Poor</label>
+                    </div>
+                    <div class="invalid-feedback">Please select a rating.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
