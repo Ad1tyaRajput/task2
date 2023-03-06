@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: burlywood;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-image: url(https://www.mckinsey.com/~/media/mckinsey/business%20functions/strategy%20and%20corporate%20finance/our%20insights/the%20coronavirus%20effect%20on%20global%20economic%20sentiment/the-coronavirus-effect-on-global-economic-sentiment-5050-1536x1536.jpg?mw=677&car=8:5);
+            background-size: contain;
+        }
+
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            background-color: white;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: red;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            font-size: 16px;
+            color: #333;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+
+    <script src="form.js"></script>
+
+</head>
+
+<body>
+    <h1>Business Survey Form</h1>
+    <form name="surveyForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="industry">Industry:</label>
+        <select id="industry" name="industry">
+            <option value="">--Please select an industry--</option>
+            <option value="IT">IT</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Finance">Finance</option>
+            <option value="Education">Education</option>
+        </select><br><br>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea><br><br>
+
+        <label for="rate">Rate our service:</label>
+        <input type="radio" id="rate1" name="rate" value="1">1
+        <input type="radio" id="rate2" name="rate" value="2">2
+        <input type="radio" id="rate3" name="rate" value="3">3
+        <input type="radio" id="rate4" name="rate" value="4">4
+        <input type="radio" id="rate5" name="rate" value="5">5<br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
